@@ -1,16 +1,18 @@
 {
-    "name": "Bing Search Automator",
-    "version": "1.2.0",
+    "name": "Bing Search Idlemate",
+    "version": "1.3.0",
     "description": "Chrome / Edge extension for Automatic Bing Search",
     "manifest_version": 3,
-    "author": "Andrea Corriga",
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "Bing Search Automator"
-    },
+    "author": "Andrea Corriga & kimi-builds",
+    "action":{},
      "icons": { 
         "16": "./img/icon16.png",
         "48": "./img/icon48.png",
        "128": "./img/icon128.png" 
+    },
+    "permissions":["tabs","activeTab","webRequest","debugger","scripting"],
+    "host_permissions":["*://*.bing.com/*"],
+    "background": {
+        "service_worker": "./js/background.js"
     }
 }

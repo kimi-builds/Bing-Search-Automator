@@ -1,18 +1,17 @@
             <!-- CSS only -->
-
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bing Search Automator</title>
+        <title>BSI</title>
         <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/fa-all.min.css" rel="stylesheet">
         <link href="./css/custom.css" rel="stylesheet">
     </head>
     <body class="pt-25">
 
-        <div class="container-fluid" style="text-align:center;">
+        <div class="container-fluid" style="text-align:center; float:left; width:400px">
             <h1>Bing Search Idlemate</h1>
             <p id="label1">(fork of AsoStrife's Bing Search Automator)</p>
             <p> <span id="currentSearchNumber">0</span> / <span id="totSearchesNumber">0</span> Desktop Searches</p>
@@ -38,9 +37,9 @@
             <button type="button" class="btn btn-primary mt-25" id="desktopButton">Desktop</button>
             <button type="button" class="btn btn-primary mt-25" id="mobileButton">Mobile</button>
         </div>
-
-        <div class="container mt-30">
-            <label class="form-label">Number of searches:</label>
+        <div id="fly" style="margin-left:440px"><iframe id="reff" src="https://www.bing.com/rewardsapp/flyout?channel=0&amp;partnerId=EdgeHub&amp;CREA=MY01UB&amp;PUBL=EDGEIP" height="400" width="800"></iframe></div>
+        <div style="float:left" class="container mt-30">
+            <label class="form-label">Number of desktop searches:</label>
             <input type="number"
                     class="form-control form-control-sm "
                     id="totSearchesForm"
@@ -49,8 +48,8 @@
                     value="">
         </div>
 
-        <div class="container mt-30">
-            <label class="form-label">Number of searches mobile:</label>
+        <div style="margin-left:450px" class="container mt-30">
+            <label class="form-label">Number of mobile searches:</label>
             <input type="number"
                     class="form-control form-control-sm "
                     id="totSearchesMobileForm"
@@ -60,7 +59,7 @@
         </div>
 
         <nav class="navbar navbar-expand navbar-dark bg-primary fixed-bottom">
-            <div class="navbar-collapse collapse">
+            <div style="height:30px" class="navbar-collapse collapse">
                 <ul class="navbar-nav ms-auto">
                     <a class="nav-link waves-effect waves-light" href="https://andreacorriga.com" target="_blank" title="Author's Website">
                         <i class="fa-solid fa-user-astronaut"></i>

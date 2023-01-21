@@ -1,5 +1,5 @@
 import words from '../data/words.js'
-
+var reff=document.getElementById("reff");
 chrome.runtime.connect({ name: "popup" });
 
 // Phones for mobile searches
@@ -90,19 +90,21 @@ async function doSearchesDesktop() {
 });}
 
     for (var i = 0; i < numberOfSearches; i++) {
-        if(i==1) {
+        if(i==0) {
             await getCurrentTab();
         }
+        switch(i){
+            case 29:
+            case 59:
+            case 74:
+            case 89:{
+                reff.src+="";
+            }
+        }
         let randomNumber = Math.floor(Math.random() * words.length)
-
-        if(i>0){chrome.tabs.update(currTab,{
-            url: `https:www.bing.com/search?q=${words[randomNumber]}`
-        })}
-        else {
-            chrome.tabs.update({
+        chrome.tabs.update(currTab,{
             url: `https:www.bing.com/search?q=${words[randomNumber]}`
         })
-        }
 
         setProgress( parseInt( ( (i + 1) / numberOfSearches) * 100), 'desktop' )
 
@@ -126,19 +128,19 @@ async function doSearchesDesktop() {
 }
 
     for (var i = 0; i < numberOfSearchesMobile; i++) {
-         if(i==1) {
+         if(i==0) {
             await getCurrentTab();
         }
+        switch(i){
+            case 14:
+            case 44:{
+                reff.src+="";
+            }
+        }
         let randomNumber = Math.floor(Math.random() * words.length)
-
-        if(i>0){chrome.tabs.update(currTab,{
-            url: `https:www.bing.com/search?q=${words[randomNumber]}`
-        })}
-        else {
-            chrome.tabs.update({
+        chrome.tabs.update(currTab,{
             url: `https:www.bing.com/search?q=${words[randomNumber]}`
         })
-        }
 
         setProgress( parseInt( ( (i + 1) / numberOfSearchesMobile) * 100), 'mobile' )
 

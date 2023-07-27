@@ -2,6 +2,8 @@ chrome.action.onClicked.addListener(function (tab) {
   chrome.tabs.create({ url: '../index.html', active: true });
   })
 
+//Chrome API code to run code for the iframe ID'ed as ptsTotal
+
 async function getTabId() {
     return new Promise( (resolve, reject) => {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

@@ -1,5 +1,5 @@
 import words from '../data/words.js'
-var reff=document.getElementById("reff");
+var reff=document.getElementById("reff"), reff2=document.getElementById("reff2");
 chrome.runtime.connect({ name: "popup" });
 
 // Phones for mobile searches
@@ -8,7 +8,7 @@ var phonesArray = [{
     width: 384,
     height: 640,
     deviceScaleFactor: 2,
-    userAgent: "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 4 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/109.0.52.64 Mobile Safari/535.19",
+    userAgent: "Mozilla/5.0 (Linux; Android 9; Primo H8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36",
     touch: true,
     mobile: true
 }]
@@ -90,7 +90,7 @@ async function doSearchesDesktop() {
 });}
 
     for (var i = 0; i < numberOfSearches; i++) {
-        if(i==0) {
+        if(i===0) {
             await getCurrentTab();
         }
         switch(i){
@@ -98,6 +98,7 @@ async function doSearchesDesktop() {
             case 59:
             case 74:
             case 89:{
+                reff2.src+="";
                 reff.src+="";
             }
         }
@@ -128,12 +129,13 @@ async function doSearchesDesktop() {
 }
 
     for (var i = 0; i < numberOfSearchesMobile; i++) {
-         if(i==0) {
+         if(i===0) {
             await getCurrentTab();
         }
         switch(i){
             case 14:
             case 44:{
+                reff2.src+="";
                 reff.src+="";
             }
         }
@@ -179,12 +181,12 @@ function activateForms() {
  * @param {*} value
  */
 function setProgress(value, type){
-    if(type == 'desktop'){
+    if(type === 'desktop'){
         progressDesktop.style.width = value + "%";
         progressDesktop.innerText = value + "%";
     }
 
-    if(type == 'mobile'){
+    if(type === 'mobile'){
         progressMobile.style.width = value + "%";
         progressMobile.innerText = value + "%";
     }

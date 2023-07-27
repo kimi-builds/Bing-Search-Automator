@@ -1,6 +1,6 @@
 {
     "name": "Bing Search Idlemate",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "description": "Chrome / Edge extension for Automatic Bing Search",
     "manifest_version": 3,
     "author": "Andrea Corriga & kimi-builds",
@@ -10,7 +10,7 @@
         "48": "./img/icon48.png",
        "128": "./img/icon128.png" 
     },
-    "permissions":["tabs","activeTab","webRequest","debugger","scripting"],
+    "permissions":["tabs","activeTab","webRequest","debugger","scripting","webNavigation"],
     "host_permissions":["*://*.bing.com/*"],
     "background": {
         "service_worker": "./js/background.js"

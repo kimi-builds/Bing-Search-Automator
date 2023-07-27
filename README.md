@@ -8,6 +8,6 @@ This extension automatically performs an x number of searches on Bing with a 500
 Install it by dragging the compressed folder or the .crx file to your browser's extensions hub, having developer mode enabled. 
 
 ![Appearance as of July 27th, 2023](https://github.com/kimi-builds/Bing-Search-Idlemate/assets/90973263/54141767-a670-4e39-8ba7-dc01915fb354)
-)
+
 ## Known bugs
 As in the original extension some searches will not count towards the points total. Appreciate possible solutions.
